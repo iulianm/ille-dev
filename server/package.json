@@ -1,0 +1,42 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "GRANO Prototype",
+  "main": "index.js",
+  "engines": {
+    "node": "8.1.1",
+    "npm": "5.0.3"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "nodemon --exec \"mocha -R min\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.3",
+    "concurrently": "^3.6.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "lodash": "^4.17.10",
+    "mocha": "^5.2.0",
+    "mongoose": "^5.2.2",
+    "morgan": "^1.9.0",
+    "node-localstorage": "^1.3.1",
+    "nodemon": "^1.17.5",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0",
+    "passport-local": "^1.0.0",
+    "session-file-store": "^1.2.0",
+    "sessionstore": "^1.3.3"
+  }
+}

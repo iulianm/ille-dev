@@ -1,0 +1,393 @@
+/* 
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+Orange color: #e67e22
+
+*/
+
+/* ------------------------------------------------------
+BASIC SETUP
+------------------------------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    background-color: #fff;
+    color: #555;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix {
+    zoom: 1
+}
+
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* ------------------------------------------------------
+LANDING PAGE
+------------------------------------------------------ */
+
+.landing-page {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(/resources/css/img/study-time-min.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/resources/css/img/study-time-min.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;    
+}
+
+.landing-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%)
+}
+
+/* ------------ HEADINGS --------------- */
+
+.heading-main {
+    display: block;
+    font-weight: 400;
+    font-size: 180%;
+    letter-spacing: 30px;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.heading-sub {
+    display: block;
+    font-size: 80%;
+    word-spacing: 5px;
+    letter-spacing: 5px;
+    line-height: 1.7;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+/* Site Navigation */
+.main-nav {
+    /* margin-top: 20px; */
+  }
+  
+  .main-nav ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-nav li {
+    list-style: none;
+    float: left;
+    margin-right: 5px;
+  }
+  
+  .main-nav a {
+    display: block;
+    color: #617140;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 3px solid #e5e9dc;
+    border-bottom: none;
+  }
+  
+  .main-nav a:hover {
+    background-color: #e5e9dc;
+  }
+
+/* ------------ BUTTONS ----------------- */
+
+.landing-box-buttons{
+    width: 30%;
+    margin-top: 50px;
+    margin-left: -10px;
+}
+
+
+.landing-box-buttons a{
+    float: left;
+    margin-top: 25px;
+    margin-left: 10px;
+}
+
+
+.login-local {
+    width: 40%;
+}
+
+.signup-local {
+    width: 40%;
+}
+
+.signin-google {
+    width: 83%;
+}
+
+/* ------------------------------------------------------
+REUSABLE COMPONENTS
+------------------------------------------------------ */
+
+.dashboard {
+    height: 94vh;
+}
+
+.header,
+.footer
+{
+    /* height: 32px; */
+    border-top: 2px solid #e67e22;
+    border-bottom: 2px solid #e67e22;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.box {
+    padding: 1%;
+}
+
+/* ------------ HEADINGS ----------------- */
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 240%;
+    word-spacing: 4px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+/* ------------ BUTTONS ----------------- */
+
+.btn:link,
+.btn:visited,
+button,
+input[type=submit] {
+    display: inline-block;
+    padding: 11px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 200px;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+button,
+input[type=submit] {
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+
+.btn:hover,
+.btn:active,
+button:hover,
+button:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #cf6d17;
+}
+
+.btn-full:hover,
+.btn-full:active,
+button,
+input[type=submit] {
+    border: 1px solid #cf6d17;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid cf6d17;
+    color: #fff;
+}
+
+.fa-google-plus
+{
+    margin-right: 8px;
+    font-size: 23px;
+}
+.fa-check,
+.fa-times {
+    margin-left: 8px;
+    font-size: 23px;
+}
+
+/* ------------------------------------------------------
+FORM
+------------------------------------------------------ */
+
+.login-form,
+.signup-form {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.local-strategy-form-box {
+    position: absolute;
+    width: 50%;    
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);   
+    padding: 40px 0 6px 0;
+    margin-top: 35px;
+}
+
+.paragraph-new-form-box {
+    position: block;
+    width: 100%;    
+    background-color: rgb(255, 200, 200);   
+    padding: 40px 0 6px 0;
+    margin-top: 35px;
+}
+
+.phrase-new-form-box {
+    position: block;
+    width: 100%;    
+    background-color: rgb(184, 209, 255);   
+    padding: 40px 0 6px 0;
+    margin-top: 35px;
+}
+
+.sentence-new-form-box {
+    position: block;
+    width: 96%;    
+    margin-left: 2%;
+    background-color: rgb(194, 245, 198);   
+    padding: 40px 0 6px 0;
+    margin-top: 35px;
+}
+
+.expression-new-form-box {
+    position: block;
+    width: 96%;    
+    margin-left: 2%;
+    background-color: rgb(250, 243, 151);   
+    padding: 40px 0 6px 0;
+    margin-top: 35px;
+}
+
+.word-new-form-box {
+    position: block;
+    width: 96%;    
+    margin-left: 2%;
+    background-color: rgb(221, 188, 240);   
+    padding: 40px 0 6px 0;
+    margin-top: 35px;
+}
+
+.wordGrammar-new-form-box {
+    position: block;
+    width: 96%;    
+    margin-left: 2%;
+    background-color: rgb(255, 173, 173);   
+    padding: 40px 0 6px 0;
+    margin-top: 35px;
+}
+
+.wordVocabulary-new-form-box {
+    position: block;
+    width: 96%;    
+    margin-left: 2%;
+    background-color: rgb(195, 250, 247);   
+    padding: 40px 0 6px 0;
+    margin-top: 35px;
+}
+
+.wordCompound-new-form-box {
+    position: block;
+    width: 96%;    
+    margin-left: 2%;
+    background-color: rgb(160, 241, 149);   
+    padding: 40px 0 6px 0;
+    margin-top: 35px;
+}
+
+.punctuation-new-form-box {
+    position: block;
+    width: 96%;    
+    margin-left: 2%;
+    background-color: rgb(255, 216, 169);   
+    padding: 40px 0 6px 0;
+    margin-top: 35px;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+*:focus {
+    outline: none;
+}
